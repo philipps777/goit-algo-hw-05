@@ -20,14 +20,29 @@ def binary_search(arr, x):
                 mid += 1
             return iterations, upper_bound
 
-    return iterations, upper_bound if upper_bound is not None else -1
+    return iterations, upper_bound if upper_bound is not None else True
 
 
 def main():
     arr = [1.5, 2.5, 3.7, 5.2, 7.1, 8.9, 10.3]
     x = 6.2
+
+    print("\nЯ шукаю  значення: ", x)
+
     iterations, upper_bound = binary_search(arr, x)
-    if upper_bound != -1:
+    if upper_bound != True:
+        print(
+            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
+    else:
+        print(
+            f"Кількість ітерацій: {iterations}. Верхня межа: {arr[high]}")
+
+    x = 8.9
+
+    print("\nЯ шукаю  значення: ", x)
+
+    iterations, upper_bound = binary_search(arr, x)
+    if upper_bound != True:
         print(
             f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
     else:
