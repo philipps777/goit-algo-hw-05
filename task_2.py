@@ -20,7 +20,7 @@ def binary_search(arr, x):
                 mid += 1
             return iterations, upper_bound
 
-    return iterations, upper_bound if upper_bound is not None else True
+    return iterations, upper_bound if upper_bound is not None else arr[mid]
 
 
 def main():
@@ -35,9 +35,9 @@ def main():
             f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
     else:
         print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {arr[high]}")
+            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
 
-    x = 8.9
+    x = 5.2
 
     print("\nЯ шукаю  значення: ", x)
 
@@ -47,7 +47,31 @@ def main():
             f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
     else:
         print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {arr[high]}")
+            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
+
+    x = 18.9
+
+    print("\nЯ шукаю  значення: ", x)
+
+    iterations, upper_bound = binary_search(arr, x)
+    if upper_bound != True:
+        print(
+            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
+    else:
+        print(
+            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
+
+    x = -18.9
+
+    print("\nЯ шукаю  значення: ", x)
+
+    iterations, upper_bound = binary_search(arr, x)
+    if upper_bound != True:
+        print(
+            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
+    else:
+        print(
+            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
 
 
 if __name__ == "__main__":
