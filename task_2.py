@@ -25,53 +25,16 @@ def binary_search(arr, x):
 
 def main():
     arr = [1.5, 2.5, 3.7, 5.2, 7.1, 8.9, 10.3]
-    x = 6.2
 
-    print("\nЯ шукаю  значення: ", x)
+    def test_binary_search(arr, x):
+        print("\nЯ шукаю  значення: ", x)
+        iterations, upper_bound = binary_search(arr, x)
+        print(f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
 
-    iterations, upper_bound = binary_search(arr, x)
-    if upper_bound != True:
-        print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
-    else:
-        print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
-
-    x = 5.2
-
-    print("\nЯ шукаю  значення: ", x)
-
-    iterations, upper_bound = binary_search(arr, x)
-    if upper_bound != True:
-        print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
-    else:
-        print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
-
-    x = 18.9
-
-    print("\nЯ шукаю  значення: ", x)
-
-    iterations, upper_bound = binary_search(arr, x)
-    if upper_bound != True:
-        print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
-    else:
-        print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
-
-    x = -18.9
-
-    print("\nЯ шукаю  значення: ", x)
-
-    iterations, upper_bound = binary_search(arr, x)
-    if upper_bound != True:
-        print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
-    else:
-        print(
-            f"Кількість ітерацій: {iterations}. Верхня межа: {upper_bound}")
+    test_binary_search(arr, 6.2)
+    test_binary_search(arr, 5.2)
+    test_binary_search(arr, 18.9)
+    test_binary_search(arr, -18.9)
 
 
 if __name__ == "__main__":
